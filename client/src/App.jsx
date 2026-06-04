@@ -11,6 +11,7 @@ import Login from './pages/Login'
 import api from './configs/api'
 import { login, setLoading } from './app/features/authSlice'
 import { Toaster } from 'react-hot-toast'
+import { Analytics } from '@vercel/analytics/react'
 
 const App = () => {
   const dispatch = useDispatch()
@@ -55,6 +56,7 @@ const App = () => {
         </Route>
         <Route path="/view/:resumeId" element={<Preview />} />
       </Routes>
+      <Analytics />
     </>
   )
 }
